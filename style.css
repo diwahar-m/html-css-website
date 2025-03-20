@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+}
+body { 
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 100%;
+    margin: 0;
+    background-color: #030712;
+    box-sizing: border-box;
+}
+.main-container {
+    background-image: url('https://chriscourses.com/_nuxt/img/stars.af9e04c.svg');
+    max-width: 100%;
+    position: relative;
+}
+.section {
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+    /* position: relative; */
+}
+.section>img {
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: -250px;
+    width: 30%;
+    animation: satellite 5s ease 0s infinite both ;
+}
+ @keyframes satellite {
+    0% {
+      left: -150px;
+      rotate: 0deg;
+    }
+    25% {
+        left: 250px;
+
+        rotate: 90deg;
+    }
+    50% {
+        left: 450px;
+        top: 100px;
+        rotate: 180deg;
+    }
+    75%{
+        left: 850px;
+        top: 200px;
+        rotate: 250deg;
+    }
+    100% {
+        left: 1050px;
+        top: 400px;
+        rotate: 360deg;
+    }
+    
+} 
+
+ /* sun animation */
+.section .sun {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 120px;
+    right: -30px;
+    background-image: radial-gradient(circle, red 20%, yellow);
+    border-radius: 50%;
+    box-shadow: 1px 1px 30px 10px yellow;
+    animation: sun-animation 4s ease 0s infinite both ;
+    display: none;
+}
+ @keyframes sun-animation {
+    0% {
+        box-shadow: 1px 1px 30px 20px yellow;
+        display: inline-block;
+    }
+    25% {
+        box-shadow: 1px 1px 30px 50px yellow;
+    }
+    50% {
+       box-shadow: 1px 1px 30px 100px yellow;
+    }
+    75%{
+        box-shadow: 1px 1px 30px 50px yellow;
+    }
+    100% {
+        box-shadow: 1px 1px 30px 5px yellow;
+        display: none;
+    }  
+} 
+
+/* moon animation */
+/* .section .moon {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 120px;
+    right: -30px;
+    background-image: radial-gradient(circle, white 20%, rgb(7, 187, 241));
+    border-radius: 50%;
+    box-shadow: 1px 1px 30px 10px yellow;
+    animation: moon-animation 4s ease 5s infinite both ;
+    display: none;
+}
+ @keyframes moon-animation {
+    0% {
+        box-shadow: 1px 1px 30px 20px rgb(7, 187, 241);
+        display: inline-block;
+    }
+    25% {
+        box-shadow: 1px 1px 30px 50px rgb(7, 187, 241);
+    }
+    50% {
+       box-shadow: 1px 1px 30px 100px rgb(7, 187, 241);
+    }
+    75%{
+        box-shadow: 1px 1px 30px 50px rgb(7, 187, 241);
+    }
+    100% {
+        box-shadow: 1px 1px 30px 10px rgb(7, 187, 241);
+        display: none;
+    }
+    
+}  */
+
+
+.hero-container {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+}
+.hero-container h1 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 60px;
+}
+h1 span {
+    color: #90CAC7;
+}
+h5 {
+    color: #fff;
+}
+.hero-container button {
+    color: #539D98;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+
+
+
+
+header {
+    /* background-color: #030712; */
+    /* background-color: white; */
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;  
+}
+header>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+}
+.logo {
+    width: 140px;
+    height: 43px;
+} 
+ul {
+    display: flex;
+}
+ul li {
+    list-style-type: none;
+    color: white;
+    margin: 0 20px;
+
+}
+button {
+    width: 175px;
+    height: 43px;
+    font-weight:bold;
+    padding: 13px 32px;
+    color: white;
+    border: none;
+    background-color: transparent;
+}
+.sign-up{
+    border-radius: 56px;
+    background-color: #539D98;
+    
+}
+.section-2 {
+  position: relative;
+  /* background-color: #212936; */
+  z-index: 30;
+}
+.count {
+    background-color: #212936;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    position: absolute;
+    left: 30%;
+    top:-40%;
+    padding: 5px;
+    border-radius: 20px;;
+}
+.count>div{
+  padding: 4px;
+  color: #7575D7;
+}
+.count>div>h4{
+  font-size: 20px;
+}
+.count>div>p{
+  color: #fff;
+}
+.count>div:first-child {
+    border-right: 1px solid black;
+}
+.count>div:nth-child(2) {
+    border-right: 1px solid black;
+}
